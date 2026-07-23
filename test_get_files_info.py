@@ -1,24 +1,24 @@
 from functions.get_files_info import get_files_info
 
 
-def main():
+def test() -> None:
+    result = get_files_info("calculator", ".")
     print("Result for current directory:")
-    print(get_files_info("calculator", "."))
-    print()
+    print(result)
+    print("")
 
+    result = get_files_info("calculator", "pkg")
     print("Result for 'pkg' directory:")
-    print(get_files_info("calculator", "pkg"))
-    print()
+    print(result)
 
+    result = get_files_info("calculator", "/bin")
     print("Result for '/bin' directory:")
-    print(get_files_info("calculator", "/bin"))
-    print()
+    print(result)
 
+    result = get_files_info("calculator", "../")
     print("Result for '../' directory:")
-    print(get_files_info("calculator", "../"))
-
-
+    print(result)
 
 
 if __name__ == "__main__":
-    main()
+    test()
